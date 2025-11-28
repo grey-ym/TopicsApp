@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
@@ -21,7 +20,6 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -33,7 +31,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.util.packInts
 import com.ym.grey.courses.data.DataSource
 import com.ym.grey.courses.model.Topic
 import com.ym.grey.courses.ui.theme.CoursesAppTheme
@@ -52,6 +49,7 @@ class MainActivity : ComponentActivity() {
 
 
 
+@Preview(showBackground = true)
 @Composable
 fun CoursesApp() {
     Surface(
@@ -63,15 +61,6 @@ fun CoursesApp() {
             modifier = Modifier.padding(dimensionResource(R.dimen.padding_small))
         )
     }
-}
-
-//@Preview(showBackground = true)
-@Composable
-fun TopicsGridPreview() {
-    TopicsGrid(
-        topics = DataSource.topics,
-        modifier = Modifier.padding(dimensionResource(R.dimen.padding_small))
-    )
 }
 
 @Composable
